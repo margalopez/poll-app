@@ -8,4 +8,11 @@ export default defineConfig({
 	transformers: [
 		transformerDirectives(),
 	],
+	theme: {
+		colors: {},
+		fontFamily: {
+            sans: ['MozillaText', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['Arvo', 'ui-serif', 'Georgia', 'serif'],
+        }
+	}
 })

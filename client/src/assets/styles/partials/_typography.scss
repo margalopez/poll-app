@@ -1,0 +1,11 @@
+* {
+    @apply font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-400;
+}
+
+p, li, span, a, button, input, textarea {
+    @apply font-500 font-sans text-base;
+}

@@ -1,0 +1,19 @@
+// Style reset
+
+*,
+*::before,
+*::after {
+    @apply box-border m-0 p-0;
+}
+
+html, body {
+    @apply h-full w-full font-inherit bg-white text-black;
+}
+
+img, picture, video, canvas, svg {
+    @apply block max-w-full
+}
+
+button, input, textarea, select {
+    @apply font-inherit bg-none border-none;  
+}

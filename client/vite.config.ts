@@ -6,15 +6,19 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import UnoCSS from 'unocss/vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    UnoCSS(),
-    vue(),
-    vueDevTools(),
-  ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
-  },
+export default defineConfig(({ command }) => {
+	const isProd = command === 'build'
+	return {
+		plugins: [
+			UnoCSS(),
+			vue(),
+    		vueDevTools(),
+		],
+		resolve: {
+			alias: {
+				'@': fileURLToPath(new URL('./src', import.meta.url))
+			},
+		},
+		base: isProd ? '' : '/',
+	}
 })
