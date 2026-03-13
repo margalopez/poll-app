@@ -1,11 +1,19 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+<div class="container">
+	<!-- UnoCSS (Tailwind) utility classes -->
+	<h1>Title</h1>
+	<p class="text-gray-500">Hot reload and scoped SCSS are working if this looks styled.</p>
+</div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.container {
+	@apply p-8;
+
+	h1 {
+		@apply text-3xl font-bold text-blue-600 mb-4;
+	}
+}
+</style>
