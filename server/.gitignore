@@ -8,6 +8,8 @@ node_modules
 
 # SQLite databases (better-sqlite3)
 *.db
+*.db-wal
+*.db-shm
 *.sqlite
 *.sqlite3
 
