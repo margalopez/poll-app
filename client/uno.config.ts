@@ -1,9 +1,18 @@
-import { defineConfig, presetWind } from 'unocss'
+import { defineConfig, presetWind, presetIcons } from 'unocss'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   	presets: [
 		presetWind(),
+		presetIcons({
+			collections: {
+				poll: FileSystemIconLoader(
+					'./src/assets/icons',
+					svg => svg.replace(/#fff/, 'currentColor')
+				),
+			}
+		})
 	],
 	transformers: [
 		transformerDirectives(),

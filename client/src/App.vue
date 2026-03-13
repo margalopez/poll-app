@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
 
 <template>
-<div class="container">
-	<!-- UnoCSS (Tailwind) utility classes -->
-	<h1>Title</h1>
-	<p class="text-gray-500">Hot reload and scoped SCSS are working if this looks styled.</p>
-</div>
+	<div class="poll-app">
+		<RouterView />
+	</div>
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+
+</script>
 
 <style scoped lang="scss">
 .container {

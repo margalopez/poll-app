@@ -17,3 +17,7 @@ img, picture, video, canvas, svg {
 button, input, textarea, select {
     @apply font-inherit bg-none border-none;  
 }
+
+i[class*="i-poll-"] {
+    @apply w-4.5 h-4.5 block;
+}
