@@ -6,6 +6,8 @@ const router = createRouter({
         path: '/', component: () => import('../views/PollView.vue')
     }, {
         path: '/vote/:id', component: () => import('../views/VoteView.vue')
+    }, {
+        path: '/results/:id', component: () => import('../views/ResultsView.vue')
     }],
 })
 
